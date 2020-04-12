@@ -111,9 +111,9 @@ class MusicLibraryController
 
       input = gets.strip.to_i
       if (input >= 1) && (input <= song_list.size)
-        song = song_list[input+2]
+        song_choice = song_list[input+2]
         binding.pry
-        puts "Playing #{song.name} by #{song.artist.name}"
+        puts "Playing #{song_choice.name} by #{song_choice.artist.name}"
       end
   end
 

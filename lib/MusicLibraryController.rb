@@ -100,8 +100,4 @@ class MusicLibraryController
         puts "Playing #{song_choice.name} by #{song_choice.artist.name}"
       end
   end
-
-
-
-
 end

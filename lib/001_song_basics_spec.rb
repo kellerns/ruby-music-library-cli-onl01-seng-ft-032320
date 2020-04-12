@@ -72,8 +72,8 @@ class Song
 
   def self.new_from_filename(file_name)
     file_array = []
-    file_array << file_name.split(" - ")[1]
     file_array << file_name.split(" - ")[0]
+    file_array << file_name.split(" - ")[1]
     file_array << file_name.split(" - ")[2].chomp(".mp3")
       file_array
       binding.pry

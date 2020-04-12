@@ -1,7 +1,5 @@
 module Concerns::Findable
 
-  module ClassMethods
-
     def find_by_name(object_name)
       self.all.find do |object|
         object.name == object_name
@@ -15,5 +13,4 @@ module Concerns::Findable
         self.create(object_name)
       end
     end
-  end
 end

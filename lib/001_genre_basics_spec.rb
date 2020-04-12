@@ -36,7 +36,7 @@ class Genre
     if @songs.include?(song)
       song
     elsif song.genre == nil
-      song.genre = self
+      song.genre=(self)
       @songs << song
     end
   end

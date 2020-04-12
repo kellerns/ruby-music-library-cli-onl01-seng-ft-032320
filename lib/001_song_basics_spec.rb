@@ -8,7 +8,7 @@ def Song
     @@all << self
   end
 
-
+  def self.all
 
 
 

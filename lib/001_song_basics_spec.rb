@@ -22,7 +22,7 @@ class Song
     new_song
   end
 
-  def self.artist=(artist_object)
+  def artist=(artist_object)
     if @artist == nil
       @artist = artist_object
     else
@@ -36,7 +36,7 @@ class Song
     @artist
   end
 
-  def self.genre=(genre_object)
+  def genre=(genre_object)
     if @genre == nil
       @genre = genre_object
     else

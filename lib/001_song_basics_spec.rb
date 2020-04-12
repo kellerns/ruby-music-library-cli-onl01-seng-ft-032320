@@ -23,12 +23,30 @@ class Song
   end
 
   def self.artist=(artist_object)
-    @artist = artist_object.add_song(self)
+    if @artist == nil
+      @artist = artist_object
+    else
+      @artist = @artist
+    end
+    
+    if self.artist != nil
+      @artist.add_song(self)
+    end
+    
     @artist
   end
 
   def self.genre=(genre_object)
-    @genre = genre_object.add_song(self)
+    if @genre == nil
+      @genre = genre_object
+    else
+      @genre = @genre
+    end
+    
+    if self.genre != nil
+      @genre.add_song(self)
+    end
+    
     @genre
   end
 

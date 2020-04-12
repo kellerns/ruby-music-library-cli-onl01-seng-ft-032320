@@ -70,8 +70,7 @@ class MusicLibraryController
   def list_songs_by_artist
     puts "Please enter the name of an artist:"
     input = gets.chomp
-    if Artist.find_by_name(input)
-      found_artist = Artist.find_by_name(input)
+    if found_artist = Artist.find_by_name(input)
       sorted_songs = found_artist.songs.sort{ |a, b| a.name <=> b.name }
       sorted_songs.uniq.each.with_index(1) do |song, index|
         binding.pry

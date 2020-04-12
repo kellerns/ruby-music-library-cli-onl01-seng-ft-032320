@@ -70,15 +70,23 @@ class MusicLibraryController
   def list_songs_by_artist
     puts "Please enter the name of an artist:"
     input = gets.chomp
-    if Artist.find_by_name(input) == true
-      found_artist = Artist.find_by_name(input)
-      sorted_songs = found_artist.songs.sort_by do |song|
+    if artist = Artist.find_by_name(input)
+      songs_sorted_by_name = artist.songs.sort_by do |song|
         song.name
       end
-      sorted_songs.each.with_index(1) do |song, index|
+      songs_sorted_by_name.each.with_index(1) do |song,index|
         puts "#{index}. #{song.name} - #{song.genre.name}"
       end
     end
+    # if Artist.find_by_name(input) == true
+    #   found_artist = Artist.find_by_name(input)
+    #   sorted_songs = found_artist.songs.sort_by do |song|
+    #     song.name
+    #   end
+    #   sorted_songs.each.with_index(1) do |song, index|
+    #     puts "#{index}. #{song.name} - #{song.genre.name}"
+    #   end
+    # end
   end
 
   def list_songs_by_genre

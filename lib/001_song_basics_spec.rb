@@ -23,6 +23,10 @@ class Song
     artist_object.add_song(self)
   end
 
+  def genre=(genre_object)
+    genre_object.add_song(self)
+  end
+
   def self.destroy_all
     @@all.clear
   end

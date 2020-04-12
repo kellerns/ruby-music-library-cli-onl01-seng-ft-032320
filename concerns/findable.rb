@@ -1,4 +1,4 @@
-module Concerns::Findables
+module Concerns::Findable
 
   module ClassMethods
 

@@ -95,12 +95,12 @@ class MusicLibraryController
   def play_song
     puts "Please enter the name of a song:"
     input = gets.chomp
-    
+
   end
 
 
 
 
 
-  
+
 end

@@ -53,6 +53,24 @@ class Song
     @genre
   end
 
+  def self.find_by_name(song_name)
+    @@all.collect do |songs|
+      song.name == song_name
+    end
+  end
+
+
+
+
+
+
+
+
+
+
+
+
+
   def self.destroy_all
     @@all.clear
   end

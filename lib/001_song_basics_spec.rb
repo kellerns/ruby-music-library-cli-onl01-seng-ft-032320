@@ -67,7 +67,19 @@ class Song
     end
   end
 
-
+  def self.new_by_filename(file_name)
+      file_array = file_name.split(/[\-\.]/)
+      file_array.collect do |name|
+        name.rstrip!
+        name.rstrip
+        name.lstrip
+        name.lstrip!
+      end
+      file_array
+      song = self.new(file_array[1])
+      song.artist=(file_array[0])
+      song
+  end
 
 
 

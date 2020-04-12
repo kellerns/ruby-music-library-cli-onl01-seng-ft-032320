@@ -7,10 +7,10 @@ module Concerns::Findable
   end
 
   def find_or_create_by_name(object_name)
-    if self.find_by_name(song_name)
-      self.find_by_name(song_name)
+    if find_by_name(object_name)
+      find_by_name(object_name)
     else
-      song = self.create(song_name)
+      self.create(object_name)
     end
   end
 

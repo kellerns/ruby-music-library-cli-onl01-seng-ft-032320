@@ -83,16 +83,9 @@ class Song
       song.genre = Genre.find_or_create_by_name(file_array[2])
   end
 
-  def create_from_filename(file_name)
+  def self.create_from_filename(file_name)
     @@all << self.new_from_filename(file_name)
   end
-
-
-
-
-
-
-
 
   def self.destroy_all
     @@all.clear

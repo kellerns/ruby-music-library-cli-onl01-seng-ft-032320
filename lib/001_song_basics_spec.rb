@@ -16,4 +16,9 @@ def Song
     @@all << self
   end
 
+  def self.destroy_all
+    @@all.clear_all
+  end
+
+  
 end

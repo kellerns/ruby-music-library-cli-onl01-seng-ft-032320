@@ -29,7 +29,7 @@ class Artist
   def add_song(song)
     if @songs.include?(song)
       song
-    elsif song.artist == ""
+    elsif song.artist == nil
       song.artist = self
       @songs << song
     end

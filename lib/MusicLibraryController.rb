@@ -95,7 +95,6 @@ class MusicLibraryController
     if Genre.find_by_name(input)
       found_genre = Genre.find_by_name(input)
       sorted_songs = found_genre.songs.sort{ |a, b| a.name <=> b.name }
-      end
       # sorted_songs = Genre.find_by_name(input).songs.sort_by do |song|
       #   song.name
       # end

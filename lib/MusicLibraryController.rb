@@ -94,9 +94,7 @@ class MusicLibraryController
     input = gets.chomp
     if Genre.find_by_name(input)
       found_genre = Genre.find_by_name(input)
-      genre_songs = found_genre.songs
-      sorted_songs = genre_songs.sort_by do |song|
-        song.name
+      sorted_songs = found_genre.songs.sort{ |a, b| a.name <=> b.name }
       end
       # sorted_songs = Genre.find_by_name(input).songs.sort_by do |song|
       #   song.name
@@ -120,12 +118,11 @@ class MusicLibraryController
 
   def play_song
       puts "Which song number would you like to play?"
-      list_of_songs =  Song.all.sort{ |a, b| a.name <=> b.name }
+      song_list =  Song.all.sort{ |a, b| a.name <=> b.name }
 
       input = gets.strip.to_i
-      #if (input > 0) && (input <= list_of_songs.size)
       if (input >= 1) && (input <= list_of_songs.size)
-        song = list_of_songs[input+2]
+        song = song_list[input+2]
         puts "Playing #{song.name} by #{song.artist.name}"
       end
   end

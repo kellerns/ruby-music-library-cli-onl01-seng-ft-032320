@@ -80,7 +80,7 @@ class Song
       genre_obj = Genre.find_or_create_by_name(file_array[2])
       song_obj = self.find_or_create_by_name(file_array[1])
       song_obj.artist = artist_obj
-      song_obj.genre - genre_obj
+      song_obj.genre = genre_obj
       song
   end
 

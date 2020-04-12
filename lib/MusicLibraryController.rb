@@ -111,7 +111,7 @@ class MusicLibraryController
 
       input = gets.strip.to_i
       if (input >= 1) && (input <= song_list.size)
-        song_choice = song_list[input+1]
+        song_choice = song_list[(input + 1)]
         puts "Playing #{song_choice.name} by #{song_choice.artist.name}"
       end
   end

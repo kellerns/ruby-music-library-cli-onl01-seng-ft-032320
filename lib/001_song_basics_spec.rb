@@ -5,13 +5,14 @@ def Song
 
   def initialize(name)
     @name = name
+    save
   end
 
   def self.all
     @@all
   end
 
-  def self.save
+  def save
     @@all << self
   end
 

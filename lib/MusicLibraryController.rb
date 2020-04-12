@@ -89,7 +89,6 @@ class MusicLibraryController
       genre_songs = found_genre.songs
       sorted_songs = genre_songs.sort do |song|
         song.name
-        binding.pry
       end
       # sorted_songs = Genre.find_by_name(input).songs.sort_by do |song|
       #   song.name

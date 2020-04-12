@@ -27,9 +27,9 @@ class Song
     @artist
   end
 
-  # def self.genre=(genre_object)
-  #   genre_object.add_song(self)
-  # end
+  def self.genre=(genre_object)
+    genre_object.add_song(self)
+  end
 
   def self.destroy_all
     @@all.clear

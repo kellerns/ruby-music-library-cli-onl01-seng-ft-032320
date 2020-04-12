@@ -23,7 +23,7 @@ class Song
   end
 
   def self.artist=(artist_object)
-    artist_object.add_song(self)
+    @artist = artist_object.add_song(self)
   end
 
   # def self.genre=(genre_object)

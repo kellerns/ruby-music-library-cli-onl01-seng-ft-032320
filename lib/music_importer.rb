@@ -4,7 +4,6 @@ class MusicImporter
     @path = path
   end
 
-
   def path
     @path
   end

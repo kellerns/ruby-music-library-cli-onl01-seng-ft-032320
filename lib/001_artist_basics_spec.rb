@@ -31,7 +31,6 @@ class Artist
       song
     elsif song.artist == ""
       song.artist = self
-    else
       @songs << song
     end
   end

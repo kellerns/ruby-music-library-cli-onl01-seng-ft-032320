@@ -76,7 +76,6 @@ class Song
     file_array << file_name.split(" - ")[1]
     file_array << file_name.split(" - ")[2].chomp(".mp3")
       file_array
-      binding.pry
       song_artist = Artist.find_or_create_by_name(file_array[0])
       song_genre = Genre.find_or_create_by_name(file_array[2])
       song = self.new(file_array[1], song_artist, song_genre)

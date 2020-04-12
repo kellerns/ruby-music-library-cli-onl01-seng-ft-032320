@@ -28,11 +28,11 @@ class Song
     else
       @artist = @artist
     end
-    
+
     if self.artist != nil
       @artist.add_song(self)
     end
-    
+
     @artist
   end
 
@@ -42,11 +42,11 @@ class Song
     else
       @genre = @genre
     end
-    
+
     if self.genre != nil
       @genre.add_song(self)
     end
-    
+
     @genre
   end
 

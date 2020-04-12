@@ -76,8 +76,8 @@ class Song
         name.lstrip!
       end
       file_array
-      artist_obj = Artist.create(file_array[0])
-      genre_obj = Genre.create(file_array[2])
+      artist_obj = Artist.find_or_create_by_name(file_array[0])
+      genre_obj = Genre.find_or_create_by_name(file_array[2])
       song = self.new(file_array[1], artist_obj, genre_obj)
       song
   end

@@ -18,7 +18,7 @@ class Genre
   end
 
   def self.destroy_all
-    @@all.clear_all
+    @@all.clear
   end
 
   def save

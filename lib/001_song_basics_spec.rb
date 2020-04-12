@@ -71,7 +71,7 @@ class Song
   end
 
   def self.new_from_filename(file_name)
-      file_array = file_name.split(/[\-\.]/)
+      file_array = file_name.split(/[\ -\.]/)
       file_array.collect do |name|
         name.rstrip!
         name.rstrip

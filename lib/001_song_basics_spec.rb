@@ -8,7 +8,8 @@ class Song
     if artist
       self.artist = artist
       artist.songs << self
-    elsif genre
+    end
+    if genre
       self.genre = genre
       genre.songs << self
     end

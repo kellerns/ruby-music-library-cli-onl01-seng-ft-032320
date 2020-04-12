@@ -3,8 +3,9 @@ def Song
 
   @@all = []
 
-  def initialize(name)
+  def initialize(name, artist = "")
     @name = name
+    @artist = artist
   end
 
   def self.all

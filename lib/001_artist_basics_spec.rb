@@ -40,9 +40,10 @@ class Artist
   end
 
   def genres
-    songs.map do |song|
+    genre_list = songs.map do |song|
       song.genre
     end
+    genre_list.uniq
   end
 
 

@@ -4,6 +4,9 @@ class MusicLibraryController
     @path = path
   end
 
+  def call
+
+  end
 
 
 

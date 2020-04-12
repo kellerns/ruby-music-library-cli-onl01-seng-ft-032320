@@ -71,13 +71,10 @@ class Song
   end
 
   def self.new_from_filename(file_name)
-      file_array = file_name.split(/[\-\.]/)
-      file_array.collect do |name|
-        name.rstrip!
-        name.rstrip
-        name.lstrip
-        name.lstrip!
-      end
+    file_array = []
+    file_array << file_name.split(" - ")[1]
+    file_array << file_name.split(" - ")[0]
+    file_array << file_name.split(" - ")[2].chomp(".mp3")
       file_array
       song_artist = Artist.find_or_create_by_name(file_array[0])
       song_genre = Genre.find_or_create_by_name(file_array[2])

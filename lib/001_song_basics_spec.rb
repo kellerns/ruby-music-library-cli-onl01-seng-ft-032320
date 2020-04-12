@@ -20,5 +20,5 @@ def Song
     @@all.clear_all
   end
 
-  
+
 end

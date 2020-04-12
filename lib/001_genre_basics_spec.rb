@@ -27,9 +27,10 @@ class Genre
   end
 
   def artists
-    songs.map do |song|
+    artist_list = songs.map do |song|
       song.artist
     end
+    artist_list.uniq
   end
 
   def add_song(song)

@@ -76,7 +76,7 @@ class Song
         name.lstrip!
       end
       file_array
-      song = self.new(file_array[1])
+      song = self.new(file_array[1], file_array[0])
       song.artist = file_array[0]
       song
   end

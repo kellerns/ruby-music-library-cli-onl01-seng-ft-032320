@@ -12,13 +12,16 @@ def Song
     @@all
   end
 
-  def save
-    @@all << self
+  def self.create(name)
+    self.new(name)
+    save
   end
 
   def self.destroy_all
     @@all.clear_all
   end
 
-
+  def save
+    @@all << self
+  end
 end

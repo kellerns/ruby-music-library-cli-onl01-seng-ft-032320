@@ -28,7 +28,8 @@ class Song
   end
 
   def self.genre=(genre_object)
-    genre_object.add_song(self)
+    @genre = genre_object.add_song(self)
+    @genre
   end
 
   def self.destroy_all

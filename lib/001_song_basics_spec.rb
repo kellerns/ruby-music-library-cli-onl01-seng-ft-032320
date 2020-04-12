@@ -1,4 +1,4 @@
-require pry
+require 'pry'
 
 class Song
   attr_accessor :name, :artist, :genre
@@ -78,6 +78,9 @@ class Song
         name.lstrip!
       end
       file_array
+
+      binding.pry
+
       song = self.find_or_create_by_name(file_array[1])
       song.artist = Artist.find_or_create_by_name(file_array[0])
       song.genre = Genre.find_or_create_by_name(file_array[2])

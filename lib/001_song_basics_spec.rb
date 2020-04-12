@@ -77,10 +77,13 @@ class Song
       end
       file_array
       song = self.new(file_array[1])
-      song.artist=(file_array[0])
+      song.artist = file_array[0]
       song
   end
 
+  def create_from_filename(file_name)
+    self.new_from_filename(file_name).save
+  end
 
 
 

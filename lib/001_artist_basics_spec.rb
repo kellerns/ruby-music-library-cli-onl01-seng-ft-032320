@@ -24,7 +24,10 @@ def Artist
     @@all << self
   end
 
+  def add_song(name)
 
+
+  end
 
 
 

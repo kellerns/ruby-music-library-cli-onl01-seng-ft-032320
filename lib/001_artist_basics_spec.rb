@@ -42,5 +42,4 @@ class Artist
     genre_list.uniq
   end
 
-
 end

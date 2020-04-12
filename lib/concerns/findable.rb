@@ -13,5 +13,4 @@ module Concerns::Findable
       self.create(object_name)
     end
   end
-
 end

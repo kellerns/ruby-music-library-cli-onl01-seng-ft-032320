@@ -79,7 +79,8 @@ class Song
       artist_obj = Artist.find_or_create_by_name(file_array[0])
       genre_obj = Genre.find_or_create_by_name(file_array[2])
       song = self.find_or_create_by_name(file_array[1])
-      song
+      song.artist = artist_obj
+      song.genre = genre_obj
   end
 
   def create_from_filename(file_name)
